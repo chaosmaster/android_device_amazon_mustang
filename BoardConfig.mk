@@ -1,20 +1,26 @@
 TARGET_NO_BOOTLOADER := true
 
-DEVICE_PATH := device/amazon/karnak
+DEVICE_PATH := device/amazon/mustang
 
 TARGET_BOARD_PLATFORM := mt8163
 
-TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
+#TARGET_ARCH := arm64
+#TARGET_ARCH_VARIANT := armv8-a
+#TARGET_CPU_ABI := arm64-v8a
+#TARGET_CPU_ABI2 :=
+#TARGET_CPU_VARIANT := generic
 
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a7
+#TARGET_2ND_ARCH := arm
+#TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+#TARGET_2ND_CPU_ABI := armeabi-v7a
+#TARGET_2ND_CPU_ABI2 := armeabi
+#TARGET_2ND_CPU_VARIANT := cortex-a7
+
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := cortex-a7
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 
@@ -30,7 +36,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3253731328
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 11633933824
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-TW_THEME := portrait_hdpi
+TW_THEME := portrait_mdpi
 
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
 
@@ -50,3 +56,4 @@ TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_DEFAULT_BRIGHTNESS := 128
 
 TW_AMONET := true
+TW_DEFAULT_BACKUP_LIST := "/system_image;/data;/boot;"
